@@ -10,8 +10,9 @@ require("dotenv").config();
 const app = express();
 
 // Middleware
-app.use(cors());
+
 app.use(bodyParser.json());
+app.use(cors());
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
